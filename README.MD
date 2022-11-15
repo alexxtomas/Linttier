@@ -21,8 +21,8 @@ npm install -g linttier
 ### MANUALLY
 
 ```
-git clone ...
-cd linttier
+git clone https://github.com/alexxtomas/Linttier.git
+cd Linttier
 npm install
 npm link
 ```
