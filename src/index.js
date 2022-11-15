@@ -16,7 +16,7 @@ const {
 } = require('./utils/constants')
 const editTSConfig = require('./utils/editTSConfig')
 
-program.version('0.0.1', '-v, --version', 'output the current version')
+program.version('1.0.0', '-v, --version', 'output the current version')
 program
   .option(
     '-RT, --reactTypescript',
