@@ -41,25 +41,21 @@ const options = program.opts()
 
 let packagesToInstall = ''
 let eslintrc = ''
-let action = false
+let action = true
 
 if (options.reactJavascript) {
   packagesToInstall = PACKAGES_REACT_JAVASCRIPT
   eslintrc = ESLINTRC_REACT_JAVASCRIPT
-  action = true
 } else if (options.nodeJavascript) {
   packagesToInstall = PACKAGES_NODE_JAVASCRIPT
   eslintrc = ESLINTRC_NODE_JAVASCRIPT
-  action = true
 } else if (options.reactTypescript) {
   packagesToInstall = PACKAGES_REACT_TYPESCRIPT
   eslintrc = ESLINTRC_REACT_TYPESCRIPT
   editTSConfig()
-  action = true
 } else if (options.nodeTypescript) {
   packagesToInstall = PACKAGES_NODE_TYPESCRIPT
   eslintrc = ESLINTRC_NODE_TYPESCRIPT
-  action = true
 } else {
   console.error(TEMPLATE)
   action = false
