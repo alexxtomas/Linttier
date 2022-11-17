@@ -1,4 +1,4 @@
-#Linttier
+
 
 ## WHAT IS LINNTIER? ✨
 
@@ -14,15 +14,15 @@ In the typescript options, you also need to have a tsconfig.json and important t
 
 ### NPM
 
-```json
+```
 npm install -g linttier
 ```
 
 ### MANUALLY
 
-```json
-git clone ...
-cd linttier
+```
+git clone https://github.com/alexxtomas/Linttier.git
+cd Linttier
 npm install
 npm link
 ```
@@ -39,9 +39,8 @@ options →
 
 -NT → Node & Typescript config
 
-```json
+```
 linttier option
 ```
 
-##
-# Linttier
+
