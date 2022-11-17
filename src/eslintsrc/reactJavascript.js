@@ -7,6 +7,7 @@ module.exports = `module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:prettier/recommended',
+    'plugin:jsx-a11y/recommended',
     'standard'
   ],
   overrides: [
@@ -17,7 +18,8 @@ module.exports = `module.exports = {
   },
   plugins: [
     'react',
-    'prettier'
+    'prettier',
+    'jsx-a11y'
   ],
   rules: {
     'react/prop-types': 'off',

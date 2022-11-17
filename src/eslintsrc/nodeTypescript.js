@@ -7,7 +7,7 @@ module.exports = `module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'standard-with-typescript',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   overrides: [],
   parserOptions: {
@@ -26,6 +26,6 @@ module.exports = `module.exports = {
         semi: false,
         trailingComma: 'none'
       }
-    ]
+    ],
   }
 }`

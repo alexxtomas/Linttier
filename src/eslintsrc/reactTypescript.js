@@ -7,7 +7,8 @@ module.exports = `module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'standard-with-typescript',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
   overrides: [],
   parserOptions: {
@@ -15,7 +16,7 @@ module.exports = `module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'prettier', 'jsx-a11y'],
   rules: {
     'prettier/prettier': [
       'error',
@@ -26,6 +27,7 @@ module.exports = `module.exports = {
         semi: false,
         trailingComma: 'none'
       }
-    ]
+    ],
+    'jsx-a11y/rule-name': 2
   }
 }`

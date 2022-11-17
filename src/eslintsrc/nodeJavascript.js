@@ -14,7 +14,8 @@ module.exports = `module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'prettier'
+    'prettier',
+    'jsx-a11y'
   ],
   rules: {
     'prettier/prettier': [
@@ -26,6 +27,6 @@ module.exports = `module.exports = {
         semi: false,
         trailingComma: 'none'
       }
-    ]
+    ],
   }
 }`

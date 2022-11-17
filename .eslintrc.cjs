@@ -7,18 +7,15 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:prettier/recommended',
+    'jsx-a11y',
     'standard'
   ],
-  overrides: [
-  ],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: [
-    'react',
-    'prettier'
-  ],
+  plugins: ['react', 'prettier'],
   rules: {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
@@ -31,6 +28,7 @@ module.exports = {
         semi: false,
         trailingComma: 'none'
       }
-    ]
+    ],
+    'jsx-a11y/rule-name': 2
   }
 }
