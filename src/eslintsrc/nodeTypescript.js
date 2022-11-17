@@ -8,6 +8,7 @@ module.exports = `module.exports = {
     'plugin:react/jsx-runtime',
     'standard-with-typescript',
     'plugin:prettier/recommended',
+    'plugin:unicorn/recommended'
   ],
   overrides: [],
   parserOptions: {
@@ -27,5 +28,6 @@ module.exports = `module.exports = {
         trailingComma: 'none'
       }
     ],
+    'unicorn/prefer-top-level-await': 'none'
   }
 }`

@@ -18,6 +18,7 @@ module.exports = `module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier', 'jsx-a11y'],
   rules: {
+    'unicorn/prefer-top-level-await': 'none'
     'prettier/prettier': [
       'error',
       {

@@ -8,6 +8,7 @@ module.exports = `module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:unicorn/recommended'
     'standard'
   ],
   overrides: [
@@ -22,8 +23,7 @@ module.exports = `module.exports = {
     'jsx-a11y'
   ],
   rules: {
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off',
+    'unicorn/prefer-top-level-await': 'none'
     'prettier/prettier': [
       'error',
       {
