@@ -9,6 +9,7 @@ module.exports = `module.exports = {
     'standard-with-typescript',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:unicorn/recommended'
   ],
   overrides: [],
   parserOptions: {
