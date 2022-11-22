@@ -18,6 +18,7 @@ module.exports = `module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier', 'jsx-a11y'],
   rules: {
+    '@typescript-eslint/explicit-function-return-type': 'off',
     'prettier/prettier': [
       'error',
       {
