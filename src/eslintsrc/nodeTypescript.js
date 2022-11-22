@@ -4,11 +4,8 @@ module.exports = `module.exports = {
     es2021: true
   },
   extends: [
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
     'standard-with-typescript',
     'plugin:prettier/recommended',
-    'plugin:unicorn/recommended'
   ],
   overrides: [],
   parserOptions: {
@@ -16,7 +13,7 @@ module.exports = `module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     'prettier/prettier': [
       'error',
@@ -27,7 +24,6 @@ module.exports = `module.exports = {
         semi: false,
         trailingComma: 'none'
       }
-    ],
-    'unicorn/prefer-top-level-await': 'none'
+    ]
   }
 }`

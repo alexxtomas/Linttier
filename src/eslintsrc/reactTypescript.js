@@ -9,7 +9,6 @@ module.exports = `module.exports = {
     'standard-with-typescript',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:unicorn/recommended'
   ],
   overrides: [],
   parserOptions: {
@@ -19,7 +18,6 @@ module.exports = `module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier', 'jsx-a11y'],
   rules: {
-    'unicorn/prefer-top-level-await': 'none'
     'prettier/prettier': [
       'error',
       {
@@ -29,7 +27,6 @@ module.exports = `module.exports = {
         semi: false,
         trailingComma: 'none'
       }
-    ],
-    'jsx-a11y/rule-name': 2
+    ]
   }
 }`

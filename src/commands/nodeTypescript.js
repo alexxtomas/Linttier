@@ -1,2 +1,2 @@
 module.exports =
-  'npm install -D eslint-config-standard-with-typescript eslint-plugin-import eslint-plugin-n eslint-plugin-promise  eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-unicorn'
+  'npm install -D eslint-config-standard-with-typescript eslint-plugin-import eslint-plugin-n eslint-plugin-promise  eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin'

@@ -5,7 +5,6 @@ module.exports = `module.exports = {
   },
   extends: [
     'plugin:prettier/recommended',
-    'plugin:unicorn/recommended',
     'standard'
   ],
   overrides: [
@@ -16,7 +15,6 @@ module.exports = `module.exports = {
   },
   plugins: [
     'prettier',
-    'jsx-a11y'
   ],
   rules: {
     'prettier/prettier': [
@@ -28,7 +26,6 @@ module.exports = `module.exports = {
         semi: false,
         trailingComma: 'none'
       }
-    ],
-    'unicorn/prefer-top-level-await': 'none'
+    ]
   }
 }`
