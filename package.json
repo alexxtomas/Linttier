@@ -1,6 +1,6 @@
 {
   "name": "linttier",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "Linttier allows you to load a preset configuration with all the necessary standard-based prettier and eslint packages. ",
   "main": "src/index.js",
   "bin": {
@@ -10,7 +10,7 @@
     "test": "node --watch "
   },
   "keywords": [],
-  "author": "",
+  "author": "Alex Tomas ",
   "license": "ISC",
   "dependencies": {
     "commander": "^9.4.1"

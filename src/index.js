@@ -56,6 +56,7 @@ if (options.reactJavascript) {
 } else if (options.nodeTypescript) {
   packagesToInstall = PACKAGES_NODE_TYPESCRIPT
   eslintrc = ESLINTRC_NODE_TYPESCRIPT
+  editTSConfig('node')
 } else {
   console.error(TEMPLATE)
   action = false

@@ -1,4 +1,10 @@
+# Linttier
 
+## NEW VERESION 2.0.🥳
+
+**Now when you run linter for node and typescript (-NT) it creates the typescript configuration in your project root**
+
+---
 
 ## WHAT IS LINNTIER? ✨
 
@@ -14,15 +20,15 @@ In the typescript options, you also need to have a tsconfig.json and important t
 
 ### NPM
 
-```
+```json
 npm install -g linttier
 ```
 
 ### MANUALLY
 
-```
-git clone https://github.com/alexxtomas/Linttier.git
-cd Linttier
+```json
+git clone ...
+cd linttier
 npm install
 npm link
 ```
@@ -39,8 +45,6 @@ options →
 
 -NT → Node & Typescript config
 
-```
+```json
 linttier option
 ```
-
-

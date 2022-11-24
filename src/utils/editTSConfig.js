@@ -1,7 +1,14 @@
 const fs = require('fs')
 const { ESLINT_FILE_NAME } = require('../utils/constants')
+const tsConfig = require('../tsconfigs/node')
 
-const editTSConfig = () => {
+const editTSConfig = (FOR) => {
+  if (FOR === 'node') {
+    fs.writeFile('./tsconfig.json', tsConfig, (err) => {
+      if (err) console.error(err)
+    })
+    return
+  }
   fs.readFile('./tsconfig.json', (err, data) => {
     if (err) return console.error(`Error: ${err}`)
     const tsconfig = JSON.parse(data.toString())
