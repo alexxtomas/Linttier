@@ -1,6 +1,6 @@
 # Linttier
 
-## NEW VERESION 2.0.🥳
+## NEW VERESION 2.0.0🥳
 
 **Now when you run linter for node and typescript (-NT) it creates the typescript configuration in your project root**
 
@@ -20,13 +20,13 @@ In the typescript options, you also need to have a tsconfig.json and important t
 
 ### NPM
 
-```json
+```
 npm install -g linttier
 ```
 
 ### MANUALLY
 
-```json
+```
 git clone ...
 cd linttier
 npm install
