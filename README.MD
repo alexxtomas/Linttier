@@ -45,6 +45,6 @@ options →
 
 -NT → Node & Typescript config
 
-```json
+```
 linttier option
 ```
