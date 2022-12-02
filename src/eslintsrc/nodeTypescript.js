@@ -16,6 +16,7 @@ module.exports = `module.exports = {
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-var-requires': 0,
     'prettier/prettier': [
       'error',
       {
