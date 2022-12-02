@@ -10,18 +10,14 @@ module.exports = `module.exports = {
     'plugin:jsx-a11y/recommended',
     'standard'
   ],
-  overrides: [
-  ],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: [
-    'react',
-    'prettier',
-    'jsx-a11y'
-  ],
+  plugins: ['react', 'prettier', 'jsx-a11y'],
   rules: {
+    'space-before-function-paren': 'off',
     'prettier/prettier': [
       'error',
       {
@@ -33,4 +29,5 @@ module.exports = `module.exports = {
       }
     ]
   }
-}`
+}
+`
