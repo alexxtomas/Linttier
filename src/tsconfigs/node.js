@@ -1,20 +1,22 @@
 module.exports = `
 {
   "compilerOptions": {
-    "alwaysStrict": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "outDir": "build",
-    "module": "ESNext",
-    "declaration": true,
-    "sourceMap": true,
     "target": "ESNext",
-    "rootDir": "./src",
+    "module": "ESNext",
     "lib": ["ESNext"],
-    "strict": true
+    "allowJs": true,
+    "outDir": "dist",
+    "strict": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "exactOptionalPropertyTypes": true,
+    "useUnknownInCatchVariables": true,
+    "moduleResolution": "node",
+    "typeRoots": ["./src/types", "./node_modules/@types"]
   },
-  "include": ["src/**/*", ".eslintrc.cjs"],
-  "exclude": ["node_modules", "**/*.spec.ts", "build"]
+  "include": ["./src/**/*"]
 }
+
 
 `

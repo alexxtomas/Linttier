@@ -2,6 +2,7 @@
 const program = require('commander')
 const exec = require('child_process').exec
 const fs = require('fs')
+const prettier = require('./prettierrc/prettier')
 const {
   ESLINT_FILE_NAME,
   ESLINTRC_REACT_JAVASCRIPT,
@@ -69,5 +70,8 @@ if (action) {
   })
   fs.writeFile(ESLINT_FILE_NAME, eslintrc, (err) => {
     if (err) console.error(`Error: ${err}`)
+  })
+  fs.writeFile('.prettierrc', prettier, (err) => {
+    if (err) console.error(error)
   })
 }

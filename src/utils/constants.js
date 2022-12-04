@@ -1,4 +1,4 @@
-const ESLINT_FILE_NAME = '.eslintrc.cjs'
+const ESLINT_FILE_NAME = '.eslintrc'
 
 // * React JavaScript
 const ESLINTRC_REACT_JAVASCRIPT = require('../eslintsrc/reactJavascript')

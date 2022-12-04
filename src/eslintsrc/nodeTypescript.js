@@ -1,31 +1,18 @@
-module.exports = `module.exports = {
-  env: {
-    node: true,
-    es2021: true
+module.exports = `
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": ["standard-with-typescript", "prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
   },
-  extends: [
-    'standard-with-typescript',
-    'plugin:prettier/recommended',
-  ],
-  overrides: [],
-  parserOptions: {
-    project: 'tsconfig.json',
-    ecmaVersion: 'latest',
-    sourceType: 'module'
-  },
-  plugins: ['@typescript-eslint', 'prettier'],
-  rules: {
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-var-requires': 0,
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto',
-        singleQuote: true,
-        jsxSingleQuote: true,
-        semi: false,
-        trailingComma: 'none'
-      }
-    ]
+  "rules": {
+    "prettier/prettier": 2,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/strict-boolean-expressions": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-misused-promises": 0
   }
-}`
+}
+`

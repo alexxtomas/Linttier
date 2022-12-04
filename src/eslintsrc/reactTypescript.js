@@ -1,33 +1,24 @@
-module.exports = `module.exports = {
-  env: {
-    browser: true,
-    es2021: true
+module.exports = `
+  "env": {
+    "browser": true,
+    "es2021": true
   },
-  extends: [
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'standard-with-typescript',
-    'plugin:prettier/recommended',
-    'plugin:jsx-a11y/recommended',
+  ext"ends: [
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "standard-with-typescript",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended",
   ],
-  overrides: [],
-  parserOptions: {
-    project: 'tsconfig.json',
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+  "overrides": [],
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
-  plugins: ['react', '@typescript-eslint', 'prettier', 'jsx-a11y'],
-  rules: {
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto',
-        singleQuote: true,
-        jsxSingleQuote: true,
-        semi: false,
-        trailingComma: 'none'
-      }
-    ]
+  "plugins": ["react", "@typescript-eslint", "prettier", "jsx-a11y"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "prettier/prettier": 2
   }
-}`
+`
