@@ -1,4 +1,5 @@
 module.exports = `
+{
   "env": {
     "browser": true,
     "es2021": true
@@ -17,7 +18,9 @@ module.exports = `
   },
   "plugins": ["react", "prettier", "jsx-a11y"],
   "rules": {
+    "react/prop-types": "off",
     "space-before-function-paren": "off",
     "prettier/prettier": 2
   }
+}
 `

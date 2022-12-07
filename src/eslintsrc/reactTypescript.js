@@ -1,4 +1,5 @@
 module.exports = `
+{
   "env": {
     "browser": true,
     "es2021": true
@@ -21,4 +22,5 @@ module.exports = `
     "@typescript-eslint/explicit-function-return-type": "off",
     "prettier/prettier": 2
   }
+}
 `

@@ -1,6 +1,6 @@
 {
   "name": "linttier",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Linttier allows you to load a preset configuration with all the necessary standard-based prettier and eslint packages. ",
   "main": "src/index.js",
   "bin": {
