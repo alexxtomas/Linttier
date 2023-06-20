@@ -1,21 +1,21 @@
 
 
-# Contribuir al proyecto de la Kings League 🎮
+# Contribuir al proyecto Linttier 🤝
 
 [![English](https://img.shields.io/badge/language-English-blue.svg)](CONTRIBUTING.md)
 
 ## Introducción
 
-¡Gracias por tu interés en contribuir a la API de la Kings League! Apreciamos cualquier ayuda, grande o pequeña y estamos agradecidos por tu tiempo y esfuerzo. Este documento establece las pautas para contribuir al proyecto, así como el proceso para enviar pull requests.
+¡Gracias por tu interés en contribuir en el proyecto de Linttier! Apreciamos cualquier ayuda, grande o pequeña y estamos agradecidos por tu tiempo y esfuerzo. Este documento establece las pautas para contribuir al proyecto, así como el proceso para enviar pull requests.
 
 ## ¿Cómo puedo contribuir? 😊
 
-Hay muchas formas en las que puedes contribuir a la API de la Kings League, incluyendo:
+Hay muchas formas en las que puedes contribuir en Linttier, incluyendo:
 
-- Informar de buges y enviar solicitudes de nuevas funciones.
+- Informar de bugs y enviar solicitudes de nuevas funciones.
 - Escribir documentación.
 - Mejorar la cobertura de pruebas del código.
-- Enviar cambios de código y correcciones de buges.
+- Enviar cambios de código y correcciones de bugs.
 
 ## ¿Cómo enviar cambios? 🛠
 
@@ -55,8 +55,6 @@ Al escribir mensajes de commit, sigue estas buenas prácticas:
 	- `"style"` para cambios de formato.
 	- `"test"` para cambios en las pruebas.
 
-Para obtener más información sobre cómo escribir buenos mensajes de commit, puedes consultar este [artículo](https://midu.dev/buenas-practicas-escribir-commits-git/).
-
 ## ¿Cómo informo sobre bugs? 🐛
 
 Si has encontrado un bug en la API de la Kings League, te agradeceríamos que nos informaras. Para informar de un bug, sigue estos pasos:
@@ -66,9 +64,6 @@ Si has encontrado un bug en la API de la Kings League, te agradeceríamos que no
 3. Incluye cualquier detalle relevante, como la versión de la API que estás utilizando, la plataforma que estás utilizando (por ejemplo, Windows, Mac, Linux) y los pasos para reproducir el bug.
 4. Si es posible, incluye cualquier mensaje de bug o registros que puedan ser relevantes para el problema.
 
-## Comunidad 🐾
-
-Si eres nuevo en estas tecnologías, no te preocupes, tenemos una gran comunidad de desarrolladores en [Discord](https://discord.gg/midudev/ 'Discord'), siempre dispuestos a ayudar y responder a cualquier pregunta que tengas.
 
 
 
