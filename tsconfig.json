@@ -10,8 +10,9 @@
     "rootDir": "src",
     "esModuleInterop": true,
     "allowJs": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+		"types": ["vitest/globals"]
   },
-  "include": ["src"],
+  "include": ["src", ".eslintrc"],
   "exclude": ["node_modules"],
 }
