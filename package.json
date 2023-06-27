@@ -9,14 +9,14 @@
     "linttier": "index.js"
   },
   "engines": {
-    "node": ">=16.12.0"
+    "node": ">=18.0.0"
   },
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "start": "pnpm build && node dist/index.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "pnpm lint -- --fix",
-		"test": "vitest",
+    "test": "vitest",
     "prettier:format": "prettier --config .prettierrc src/**/*.ts --write"
   },
   "files": [
@@ -42,5 +42,8 @@
     "rimraf": "4.1.2",
     "typescript": "4.9.5",
     "vitest": "0.32.2"
+  },
+  "dependencies": {
+    "execa": "7.1.1"
   }
 }
