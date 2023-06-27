@@ -10,7 +10,9 @@
     "rootDir": "src",
     "esModuleInterop": true,
     "allowJs": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+		"noImplicitAny": true,
+		"useUnknownInCatchVariables": true
   },
   "include": ["src", ".eslintrc"],
   "exclude": ["node_modules"],
