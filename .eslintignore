@@ -1,3 +1,5 @@
 node_modules
 dist
 index.js
+vitest.config.ts
+__tests__
