@@ -1,18 +1,20 @@
 {
-  "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier"],
-  "extends": ["standard-with-typescript", "prettier"],
-  "parserOptions": {
-    "project": "api/tsconfig.json"
+  "env": {
+    "node": true,
+    "es2021": true
   },
 
+  "extends": ["standard-with-typescript", "eslint-config-prettier"],
+  "overrides": [],
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
   "rules": {
-    "prettier/prettier": 2,
-    "@typescript-eslint/strict-boolean-expressions": 0,
-    "@typescript-eslint/array-type": 0,
-    "@typescript-eslint/restrict-template-expressions": 0,
-    "@typescript-eslint/no-misused-promises": 0,
-    "@typescript-eslint/explicit-function-return-type": 0
+    "space-before-function-paren": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+		"@typescript-eslint/strict-boolean-expressions": 0
   }
 }
