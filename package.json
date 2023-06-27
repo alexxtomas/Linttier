@@ -16,7 +16,7 @@
     "start": "pnpm build && node dist/index.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "pnpm lint -- --fix",
-    "test": "vitest",
+    "test": " pnpm build && vitest",
     "prettier:format": "prettier --config .prettierrc src/**/*.ts --write"
   },
   "files": [
@@ -34,16 +34,22 @@
   "homepage": "https://github.com/alexxtomas/Linttier",
   "devDependencies": {
     "@types/node": "20.3.1",
-    "eslint": "8.34.0",
-    "eslint-config-prettier": "8.6.0",
-    "eslint-config-standard-with-typescript": "34.0.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "prettier": "2.8.4",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^35.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^2.8.8",
     "rimraf": "4.1.2",
     "typescript": "4.9.5",
     "vitest": "0.32.2"
   },
   "dependencies": {
+    "detect-package-manager": "2.0.1",
     "execa": "7.1.1"
   }
 }
