@@ -1,47 +1,20 @@
-import degit from 'degit'
 import { parseArgs } from 'node:util'
-import { readdirSync } from 'node:fs'
+import { readFile, writeFile } from 'node:fs/promises'
 import { LinttierError } from './entities/error.js'
+import { handleArgsErrors } from './validations/args.validation.js'
+import * as url from 'node:url'
+import { join } from 'node:path'
+import { execaCommand } from 'execa'
+import ora from 'ora'
 
-const FRAMEWORKS = ['Next', 'React', 'Vanilla']
-const TEMPLATES = ['TypeScript', 'JavaScript']
+process.removeAllListeners('warning')
 
-interface HandleArgsErrorsProps {
-	framework: string | undefined
-	template: string | undefined
-}
+function pkgFromUserAgent(userAgent: string | undefined) {
+	if (!userAgent) return undefined
+	const pkgSpec = userAgent.split(' ')[0]
+	const pkgName = pkgSpec.split('/')[0]
 
-function handleArgsErrors({ framework, template }: HandleArgsErrorsProps) {
-	if (typeof framework === 'undefined' || typeof template === 'undefined') {
-		throw new LinttierError({
-			name: 'INVALID_ARGUMENTS',
-			message: `Missing ${framework ? 'template' : 'framework'} argument`
-		})
-	}
-	if (!FRAMEWORKS.includes(framework)) {
-		throw new LinttierError({
-			name: 'INVALID_ARGUMENTS',
-			message: `Invalid framework '${framework}'.\nValid options:\n\t${FRAMEWORKS.join(
-				',\n\t'
-			)}`
-		})
-	}
-	if (!TEMPLATES.includes(template)) {
-		throw new LinttierError({
-			name: 'INVALID_ARGUMENTS',
-			message: `Invalid template '${template}'.\nValid options:\n\t${TEMPLATES.join(
-				',\n\t'
-			)}`
-		})
-	}
-
-	const files = readdirSync(process.cwd())
-	if (!files.includes('package.json')) {
-		throw new LinttierError({
-			name: 'INVALID_PACKAGE_JSON',
-			message: 'No "package.json" found in current directory'
-		})
-	}
+	return pkgName
 }
 
 export async function handleArgs() {
@@ -78,15 +51,62 @@ export async function handleArgs() {
 		const _framework = framework as string
 		const _template = template as string
 
-		console.log(
-			`Creating ${_framework} ${_template} ESLint and Prettier config...`
+		const baseUrl = `../templates/${_framework}/${_template}`
+		const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
+
+		const { default: eslintContent } = await import(
+			`${baseUrl}/.eslintrc.json`,
+			{
+				assert: { type: 'json' }
+			}
+		)
+		const { default: prettierContent } = await import(
+			`${baseUrl}/.prettierrc.json`,
+			{ assert: { type: 'json' } }
 		)
 
-		await degit(`Linttier/${_framework}/${_template}`, { force: true }).clone(
-			process.cwd()
-		)
+		const dependenciesContent = await readFile(
+			join(
+				__dirname,
+				`../templates/${_framework}/${_template}/dependencies.txt`
+			),
+			'utf-8'
+		).catch((err) => {
+			console.error(err)
+		})
+
+		const packageManager =
+			pkgFromUserAgent(process.env.npm_config_user_agent) || 'npm'
+
+		const spinner = ora(
+			'Creating ESLint and Prettier file and installing required dependencies'
+		).start()
+		Promise.all([
+			writeFile('.eslintrc', JSON.stringify(eslintContent, null, 2)),
+			writeFile('.prettierrc', JSON.stringify(prettierContent, null, 2)),
+			execaCommand(
+				`${packageManager} ${
+					packageManager === 'npm' ? 'install' : 'add'
+				} -D ${dependenciesContent}`
+			)
+		])
+			.then(() => spinner.succeed('Done!'))
+			.catch((err) => {
+				console.error(err)
+				spinner.fail('Something went wrong :(')
+			})
+
+		// const prettierrc = await import(
+		// 	`./templates/${_framework}/${_template}/.prettierrc`
+		// )
+		// const packageJson = await import(
+		// 	`./templates/${_framework}/${_template}/package.json`
+		// )
+		// const dependencies = await import(
+		// 	`./templates/${_framework}/${_template}/dependencies.txt`
+		// )
 	} catch (err) {
-		if (err instanceof Error) {
+		if (err instanceof Error || err instanceof LinttierError) {
 			console.error(err.message)
 		} else {
 			console.error(

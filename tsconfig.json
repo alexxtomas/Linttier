@@ -2,18 +2,22 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "sourceMap": true,
+    "sourceMap": false,
     "strict": true,
     "skipLibCheck": true,
     "outDir": "dist",
     "moduleResolution": "Node",
+		"declaration": false,
     "rootDir": "src",
     "esModuleInterop": true,
     "allowJs": true,
     "isolatedModules": true,
+		"noUnusedLocals": true,
 		"noImplicitAny": true,
-		"useUnknownInCatchVariables": true
+		"useUnknownInCatchVariables": true,
+		"resolveJsonModule": true
   },
-  "include": ["src", ".eslintrc"],
+
+  "include": ["src", ".eslintrc", "src/templates/*"],
   "exclude": ["node_modules"],
 }
