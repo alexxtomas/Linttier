@@ -1,0 +1,5 @@
+{
+	"lint": "eslint --fix . --ext .js",
+	"format": "prettier --write .",
+	"lint:format": "npm run lint && npm run format"
+}

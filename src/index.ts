@@ -1,8 +1,8 @@
-#!/usr/bin/env node
-
+import degit from 'degit'
 import { parseArgs } from 'node:util'
 import { readdirSync } from 'node:fs'
 import { LinttierError } from './entities/error.js'
+
 const FRAMEWORKS = ['Next', 'React', 'Vanilla']
 const TEMPLATES = ['TypeScript', 'JavaScript']
 
@@ -44,7 +44,7 @@ function handleArgsErrors({ framework, template }: HandleArgsErrorsProps) {
 	}
 }
 
-export function handleArgs() {
+export async function handleArgs() {
 	try {
 		const {
 			values: { framework, template }
@@ -81,6 +81,10 @@ export function handleArgs() {
 		console.log(
 			`Creating ${_framework} ${_template} ESLint and Prettier config...`
 		)
+
+		await degit(`Linttier/${_framework}/${_template}`, { force: true }).clone(
+			process.cwd()
+		)
 	} catch (err) {
 		if (err instanceof Error) {
 			console.error(err.message)
@@ -92,4 +96,4 @@ export function handleArgs() {
 	}
 }
 
-handleArgs()
+await handleArgs()
