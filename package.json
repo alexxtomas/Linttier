@@ -5,6 +5,9 @@
   "type": "module",
   "author": "Alex Tomas",
   "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
   "bin": {
     "linttier": "index.js"
   },
@@ -33,6 +36,7 @@
   },
   "homepage": "https://github.com/alexxtomas/Linttier",
   "devDependencies": {
+    "@types/degit": "2.8.3",
     "@types/node": "20.3.1",
     "@typescript-eslint/eslint-plugin": "^5.60.0",
     "@typescript-eslint/parser": "^5.60.0",
@@ -49,6 +53,7 @@
     "vitest": "0.32.2"
   },
   "dependencies": {
+    "degit": "2.8.4",
     "detect-package-manager": "2.0.1",
     "execa": "7.1.1"
   }
