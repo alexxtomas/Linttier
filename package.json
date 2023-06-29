@@ -1,60 +1,55 @@
 {
-  "name": "linttier",
-  "version": "3.0.0",
-  "description": "Linttier allows you to load a preset configuration with all the necessary standard-based prettier and eslint packages. ",
-  "type": "module",
-  "author": "Alex Tomas",
-  "license": "MIT",
-  "workspaces": [
-    "packages/*"
-  ],
-  "bin": {
-    "linttier": "index.js"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "scripts": {
-    "build": "rimraf ./dist && tsc",
-    "start": "pnpm build && node dist/index.js",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "pnpm lint -- --fix",
-    "test": " pnpm build && vitest",
-    "prettier:format": "prettier --config .prettierrc src/**/*.ts --write"
-  },
-  "files": [
-    "index.js",
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexxtomas/Linttier",
-    "directory": "."
-  },
-  "bugs": {
-    "url": "https://github.com/alexxtomas/Linttier/issues"
-  },
-  "homepage": "https://github.com/alexxtomas/Linttier",
-  "devDependencies": {
-    "@types/degit": "2.8.3",
-    "@types/node": "20.3.1",
-    "@typescript-eslint/eslint-plugin": "^5.60.0",
-    "@typescript-eslint/parser": "^5.60.0",
-    "eslint": "^8.43.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-config-standard-with-typescript": "^35.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^15.7.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "prettier": "^2.8.8",
-    "rimraf": "4.1.2",
-    "typescript": "4.9.5",
-    "vitest": "0.32.2"
-  },
-  "dependencies": {
-    "degit": "2.8.4",
-    "detect-package-manager": "2.0.1",
-    "execa": "7.1.1"
-  }
+	"name": "linttier",
+	"version": "3.0.0",
+	"description": "Linttier allows you to load a preset configuration with all the necessary standard-based prettier and eslint packages. ",
+	"type": "module",
+	"author": "Alex Tomas",
+	"license": "MIT",
+	"bin": {
+		"linttier": "index.js"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"scripts": {
+		"build": "rimraf ./dist && tsc",
+		"start": "pnpm build && node dist/index.js",
+		"lint": "eslint . --ext .ts",
+		"lint:fix": "pnpm lint -- --fix",
+		"test": " pnpm build && vitest",
+		"prettier:format": "prettier --config .prettierrc src/**/*.ts --write"
+	},
+	"files": [
+		"index.js",
+		"dist"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alexxtomas/Linttier",
+		"directory": "."
+	},
+	"bugs": {
+		"url": "https://github.com/alexxtomas/Linttier/issues"
+	},
+	"homepage": "https://github.com/alexxtomas/Linttier",
+	"devDependencies": {
+		"@types/node": "20.3.1",
+		"@typescript-eslint/eslint-plugin": "^5.60.0",
+		"@typescript-eslint/parser": "^5.60.0",
+		"eslint": "^8.43.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-config-standard-with-typescript": "^35.0.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-n": "^15.7.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-promise": "^6.1.1",
+		"prettier": "^2.8.8",
+		"rimraf": "4.1.2",
+		"typescript": "4.9.5",
+		"vitest": "0.32.2"
+	},
+	"dependencies": {
+		"execa": "7.1.1",
+		"ora": "6.3.1"
+	}
 }
