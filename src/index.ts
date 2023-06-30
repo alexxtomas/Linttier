@@ -6,6 +6,7 @@ import * as url from 'node:url'
 import { join } from 'node:path'
 import { execaCommand } from 'execa'
 import ora from 'ora'
+import figlet from 'figlet'
 
 process.removeAllListeners('warning')
 
@@ -18,6 +19,7 @@ function pkgFromUserAgent(userAgent: string | undefined) {
 }
 
 export async function handleArgs() {
+	console.log(figlet.textSync('Linttier', { horizontalLayout: 'full' }))
 	try {
 		const {
 			values: { framework, template }
@@ -95,16 +97,6 @@ export async function handleArgs() {
 				console.error(err)
 				spinner.fail('Something went wrong :(')
 			})
-
-		// const prettierrc = await import(
-		// 	`./templates/${_framework}/${_template}/.prettierrc`
-		// )
-		// const packageJson = await import(
-		// 	`./templates/${_framework}/${_template}/package.json`
-		// )
-		// const dependencies = await import(
-		// 	`./templates/${_framework}/${_template}/dependencies.txt`
-		// )
 	} catch (err) {
 		if (err instanceof Error || err instanceof LinttierError) {
 			console.error(err.message)

@@ -23,6 +23,20 @@
 		"index.js",
 		"dist"
 	],
+	"keywords": [
+		"cli",
+		"npmtool",
+		"eslint",
+		"prettier",
+		"nextjs",
+		"react",
+		"typescript",
+		"javascript",
+		"vanilla",
+		"automation",
+		"lint",
+		"linttier"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/alexxtomas/Linttier",
@@ -33,6 +47,7 @@
 	},
 	"homepage": "https://github.com/alexxtomas/Linttier",
 	"devDependencies": {
+		"@types/figlet": "1.5.6",
 		"@types/node": "20.3.1",
 		"@typescript-eslint/eslint-plugin": "^5.60.0",
 		"@typescript-eslint/parser": "^5.60.0",
@@ -50,6 +65,7 @@
 	},
 	"dependencies": {
 		"execa": "7.1.1",
+		"figlet": "1.6.0",
 		"ora": "6.3.1"
 	}
 }
